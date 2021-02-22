@@ -24,6 +24,16 @@ There have two versions here.
     Get the write every time when we push the message to the channel.
 2. SendVersin2
     Cache the write instance when the Proxy construct.
+3. SendVersin2
+    With async and await operation.
 
 ### Channel option or create type(bounded/undounded)
 It has no impact on this issue
+
+
+# Question here.
+Maybe my code has some bug or I does not understand the **Channel**.    
+### My question is:     
+
+If the channel does not support the Task model (Or it has some premise here, why the [**write and read**]'s methods have async words? It maybe misleads the programmer to use the channel to realize his project?).
+

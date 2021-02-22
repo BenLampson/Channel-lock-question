@@ -112,7 +112,7 @@ namespace Channel_Lock_Question
         }
 
 #if ClientVersion1
-        public void SendMessaage(MessageBody data)
+        public  void SendMessaage(MessageBody data)
         {
             _channel.Writer.WriteAsync(data);
         }
@@ -127,6 +127,12 @@ namespace Channel_Lock_Question
 #endif
 
 
+#if ClientVersion3
+        public async void SendMessaage(MessageBody data)
+        {
+            await _channel.Writer.WriteAsync(data);
+        }
+#endif
 
         public void StartJob()
         {
