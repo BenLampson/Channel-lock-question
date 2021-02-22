@@ -58,20 +58,20 @@ namespace Channel_Lock_Question
 
         }
 #endif
-        //#if SendVersion3
-        //        static void Send(MessageServerProxy proxy)
-        //        {
-        //            Task.Factory.StartNew(() =>
-        //            {
+#if SendVersion3
+                static void Send(MessageServerProxy proxy)
+                {
+                    Task.Factory.StartNew(() =>
+                    {
 
-        //                while (true)
-        //                {
-        //                    proxy.SendMessaage(new MessageBody());
+                        while (true)
+                        {
+                            proxy.SendMessaage(new MessageBody());
 
-        //                }
-        //            }, TaskCreationOptions.LongRunning);
-        //        }
-        //#endif
+                        }
+                    }, TaskCreationOptions.LongRunning);
+                }
+#endif
     }
 
 
