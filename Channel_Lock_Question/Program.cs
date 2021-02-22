@@ -83,15 +83,15 @@ namespace Channel_Lock_Question
     public class MessageServerProxy
     {
         private Channel<MessageBody> _channel =
-        //Channel.CreateUnbounded<MessageBody>();
+        Channel.CreateUnbounded<MessageBody>();
         //Channel.CreateBounded<MessageBody>(new BoundedChannelOptions(int.MaxValue)
         //{
         //    SingleReader = true
         //});
-        Channel.CreateUnbounded<MessageBody>(new UnboundedChannelOptions()
-        {
-            SingleReader = true
-        });
+        //Channel.CreateUnbounded<MessageBody>(new UnboundedChannelOptions()
+        //{
+        //    SingleReader = true
+        //});
         private Thread _jobThread;
 
         public MessageServerProxy()
